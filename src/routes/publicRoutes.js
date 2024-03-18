@@ -311,4 +311,130 @@ server.get('/mais-vendidos', (req, res) => {
     ])
 })
 
+
+server.get('/maiaas-vendidos', (req, res) => {
+    res.status(200).json([
+        {
+            "id": 1,
+            "categoria": 3,
+            "titulo": "Acessibilidade na Web",
+            "slug": "acessibilidade-na-web",
+            "descricao": "Boas práticas para construir sites e aplicações acessíveis",
+            "isbn": "978-65-86110-10-4",
+            "numeroPaginas": 246,
+            "publicacao": "2020-04-01",
+            "imagemCapa": "https://raw.githubusercontent.com/viniciosneves/alurabooks/curso-novo/public/imagens/livros/acessibilidade.png",
+            "autor": 1,
+            "opcoesCompra": [
+                {
+                    "id": 1,
+                    "titulo": "E-book",
+                    "preco": 29.9,
+                    "formatos": [
+                        ".pdf",
+                        ".pub",
+                        ".mob"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "titulo": "Impresso",
+                    "preco": 39.9
+                },
+                {
+                    "id": 3,
+                    "titulo": "E-book + Impresso",
+                    "preco": 59.9,
+                    "formatos": [
+                        ".pdf",
+                        ".pub",
+                        ".mob"
+                    ]
+                }
+            ],
+            "sobre": "Acessibilidade na Web consiste na eliminação de barreiras de acesso em páginas e aplicações digitais para que pessoas com deficiência tenham autonomia na rede. Na verdade, acessibilidade na web beneficia todas as pessoas. Em algum momento da vida todos podem precisar de acessibilidade, seja devido a uma limitação temporária ou permanente. Quando não levamos em consideração o acesso de pessoas com deficiência, estamos tirando o direito de uma pessoa de navegar, interagir ou consumir produtos e serviços na rede. Empatia é o fator principal para que as aplicações que desenvolvemos sejam inclusivas."
+        },
+        {
+            "id": 2,
+            "categoria": 3,
+            "titulo": "Angular 11 e Firebase",
+            "slug": "angular11-e-firebase",
+            "descricao": "Construindo uma aplicação integrada com a plataforma do Google",
+            "isbn": "978-85-7254-036-0",
+            "numeroPaginas": 163,
+            "publicacao": "2019-11-01",
+            "imagemCapa": "https://raw.githubusercontent.com/viniciosneves/alurabooks/curso-novo/public/imagens/livros/angular.png",
+            "autor": 2,
+            "opcoesCompra": [
+                {
+                    "id": 1,
+                    "titulo": "E-book",
+                    "preco": 29.9,
+                    "formatos": [
+                        ".pdf",
+                        ".pub",
+                        ".mob"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "titulo": "Impresso",
+                    "preco": 39.9
+                },
+                {
+                    "id": 3,
+                    "titulo": "E-book + Impresso",
+                    "preco": 59.9,
+                    "formatos": [
+                        ".pdf",
+                        ".pub",
+                        ".mob"
+                    ]
+                }
+            ],
+            "sobre": "No desenvolvimento de aplicações web e mobile, há disponível uma quantidade expressiva de linguagens, frameworks e ferramentas. Nessa imensidão, é comum se questionar ou até ter inseguranças sobre qual o melhor caminho para a construção neste segmento. O Angular é uma plataforma que facilita a construção de aplicativos, combinando templates, injeção de dependências, tudo integrado às melhores práticas de desenvolvimento."
+        },
+        {
+            "id": 3,
+            "categoria": 1,
+            "titulo": "Arquitetura de software distribuído",
+            "slug": "arquitetura-de-software-distribuído",
+            "descricao": "Boas práticas para um mundo de microsserviços",
+            "isbn": "978-65-86110-86-9",
+            "numeroPaginas": 138,
+            "publicacao": "2021-10-01",
+            "imagemCapa": "https://raw.githubusercontent.com/viniciosneves/alurabooks/curso-novo/public/imagens/livros/arquitetura.png",
+            "autor": 3,
+            "opcoesCompra": [
+                {
+                    "id": 1,
+                    "titulo": "E-book",
+                    "preco": 29.9,
+                    "formatos": [
+                        ".pdf",
+                        ".pub",
+                        ".mob"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "titulo": "Impresso",
+                    "preco": 39.9
+                },
+                {
+                    "id": 3,
+                    "titulo": "E-book + Impresso",
+                    "preco": 59.9,
+                    "formatos": [
+                        ".pdf",
+                        ".pub",
+                        ".mob"
+                    ]
+                }
+            ],
+            "sobre": "Com constantes evoluções, adições de novas funcionalidades e integrações com outros sistemas, os softwares têm se tornado cada vez mais complexos, mais difíceis de serem entendidos. Dessa forma, fazer com que os custos de manutenção desses softwares não ultrapassem o valor que eles entregam às companhias é um desafio para a arquiteta ou arquiteto de software."
+        }
+    ])
+})
+
 module.exports = server
