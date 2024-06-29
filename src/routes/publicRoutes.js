@@ -61,6 +61,24 @@ server.post('/login', (req, res) => {
     res.status(200).json({ access_token, user })
 })
 
+
+
+
+
+server.post('/newMains', (req, res) => {
+    const { email, senha } = req.body;
+    if (!usuarioExiste(email, senha)) {
+        const status = 401
+        const message = 'E-mail ou senha incorretos!'
+        res.status(status).json({ status, message })
+        return
+    }
+    const access_token = createToken({ email, senha })
+    let user = { ...userDB.usuarios.find(user => user.email === email && user.senha === senha) }
+    delete user.senha
+    res.status(200).json({ access_token, user })
+})
+
 server.get('/lancamentos', (req, res) => {
     res.status(200).json([
         {
