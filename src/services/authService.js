@@ -10,4 +10,9 @@ function verifyToken(token) {
     return jwt.verify(token, SECRET_KEY, (err, decode) => (decode !== undefined ? decode : err));
 }
 
+function verifyNewToken(token) {
+    return jwt.verify(token, SECRET_KEY, (err, decode) => (decode !== undefined ? decode : err));
+}
+
+
 module.exports = { createToken, verifyToken };
